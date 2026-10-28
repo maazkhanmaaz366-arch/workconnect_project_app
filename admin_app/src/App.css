@@ -1,0 +1,158 @@
+/* Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  width: 280px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--glass-border);
+  background: rgba(0,0,0,0.2);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 48px;
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  background: var(--glass-bg);
+  color: var(--text-primary);
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header p {
+  color: var(--text-muted);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-title {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* Data Table */
+.data-table-container {
+  width: 100%;
+  padding: 24px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 16px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.data-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.pending { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+.badge.verified { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+
+.btn-verify {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid #10b981;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-verify:hover {
+  background: #10b981;
+  color: white;
+}
+
+/* Login Screen */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-card {
+  width: 400px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
